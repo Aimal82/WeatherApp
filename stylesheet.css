@@ -13,5 +13,29 @@ body {
     align-items: center;
     margin: 20px;
 }
+input {
+    padding: 30px;
+    height: 5px;
+    width: 600px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+}
+button {
+    position: absolute;
+    top: 35px;
+    right: 500px;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.434);
+}
 
 
