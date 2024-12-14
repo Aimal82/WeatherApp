@@ -73,5 +73,9 @@ button[type="submit"]:hover {
     max-width: 30%;
     height: auto;
   }
-
+.errorDisplay {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.571);
+}
 
