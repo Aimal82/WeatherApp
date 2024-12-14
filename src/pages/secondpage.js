@@ -28,10 +28,35 @@ async function getWeatherData(city){
 
     const response = await fetch(apiUrl);
 
-    if(!response.ok)
+    if(!response.ok){
+        throw new Error("Cloud not fetch weather data");
+    }
+
+    return await response.json();
 }
 
 function displayWeatherInfo(data){
+
+    const {name: city,
+          main: {temp, humidity}, 
+          weather: [{description, id}]} = data;
+    card.textContent = "";
+    card.style.display = "flex";
+
+    const cityDisplay = document.createElement("h1");
+    const tempDisplay = document.createElement("p");
+    const humidityDisplay = document.createElement("p");
+    const discriptionDisplay = document.createElement("p");
+    const ImageDisplay = document.createElement("p");
+
+    cityDisplay.textContent = city;
+    tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`;
+
+    cityDisplay.classList.add("cityDisplay");
+    tempDisplay.classList.add("tempDisplay");
+
+    card.appendChild(cityDisplay);
+    card.appendChild(tempDisplay);
 
 }
 function getWeatherImage(WeatherId){
